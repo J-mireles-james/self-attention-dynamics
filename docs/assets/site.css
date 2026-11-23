@@ -209,3 +209,23 @@ h1 {font:400 clamp(45px,4.8vw,72px)/1.1 var(--serif); letter-spacing:-.04em; col
   .button-row{align-items:stretch}
 }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.button:hover{transform:none}}
+
+/* Conceptual art for the homepage: static and accessible, not experimental data. */
+.hero-art-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  background: #081a29;
+}
+.art-note {
+  border-top: 1px solid rgba(166,227,224,.14);
+  padding: 12px 19px;
+  margin: 0;
+  color: #88b5be;
+  font-size: 10px;
+  line-height: 1.5;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
