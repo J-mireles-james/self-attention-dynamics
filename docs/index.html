@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#101d2b">
   <meta name="description" content="Research on non-gradient self-attention particle systems, periodic and torus-like dynamics, numerical chaos, and reproducible MATLAB experiments with up to 60 particles.">
   <meta property="og:title" content="From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems">
-  <meta property="og:description" content="A mathematical and computational exploration of self-attention dynamics, with a manuscript and reproducible MATLAB experiments.">
+  <meta property="og:description" content="Analytical and numerical study of projected self-attention particle systems, including coupled systems and MATLAB reproduction materials.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://j-mireles-james.github.io/self-attention-dynamics/assets/interacting-orbits.jpg">
   <link rel="canonical" href="https://j-mireles-james.github.io/self-attention-dynamics/">
@@ -35,15 +35,15 @@
       <section class="hero" id="top" aria-labelledby="hero-title">
         <div class="container hero-grid">
           <div class="hero-copy">
-            <div class="eyebrow"><span class="eyebrow-rule"></span> MATHEMATICAL DYNAMICS · RESEARCH PREPRINT</div>
+            <div class="eyebrow"><span class="eyebrow-rule"></span> PROJECTED SELF-ATTENTION · DYNAMICAL SYSTEMS</div>
             <h1 id="hero-title">From Low-Dimensional <span class="accent-text">Chaos</span> to High-Dimensional Dynamics in Self-Attention Systems</h1>
             <p class="author-line">J. D. Mireles James <span aria-hidden="true">·</span> Florida Atlantic University <span aria-hidden="true">·</span> November 2026</p>
-            <p class="hero-lede">What changes when the particle models behind self-attention are allowed to move beyond the gradient setting? We investigate periodic orbits, torus-like recurrence, and numerical evidence of chaos—and how these behaviors interact when small systems are coupled into larger networks.</p>
+            <p class="hero-lede">We study autonomous projected self-attention systems with constant query, key, and value matrices, without imposing the symmetry assumptions that yield gradient dynamics. The analysis includes explicit periodic solutions for three particles on an ellipse, numerical investigations of recurrent dynamics, and constructions of higher-dimensional systems through structured attention coupling.</p>
             <div class="button-row">
-              <a class="button button-primary" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Read the manuscript <span aria-hidden="true">↗</span></a>
-              <a class="button button-secondary" href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab">Explore MATLAB code <span aria-hidden="true">↗</span></a>
+              <a class="button button-primary" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Manuscript (PDF) <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab">MATLAB code and data <span aria-hidden="true">↗</span></a>
             </div>
-            <p class="hero-caption">A theoretical and numerical investigation of idealized continuous-time attention systems. The observed chaotic dynamics are numerical findings, not computer-assisted existence proofs.</p>
+            <p class="hero-caption">The numerical results provide evidence for invariant-torus-like and chaotic dynamics; they do not constitute computer-assisted proofs of the existence of these invariant sets.</p>
           </div>
 
           <div class="hero-visual" aria-label="Conceptual illustration of interacting particle orbits">
@@ -54,22 +54,22 @@
         </div>
         <div class="container">
           <div class="metrics" aria-label="Project at a glance">
-            <div class="metric"><strong>03</strong><span>particles in the<br>building-block model</span></div>
+            <div class="metric"><strong>03</strong><span>particles in each<br>elementary subsystem</span></div>
             <div class="metric"><strong>09</strong><span>manuscript figures<br>with MATLAB drivers</span></div>
             <div class="metric"><strong>60</strong><span>particles in the<br>largest experiment</span></div>
-            <div class="metric"><strong>26</strong><span>computed exponents<br>exceeding 0.01</span></div>
+            <div class="metric"><strong>26</strong><span>of 40 computed exponents<br>exceeding 0.01</span></div>
           </div>
         </div>
       </section>
 
       <section class="section light-section" id="research">
         <div class="container">
-          <div class="section-heading"><p class="section-tag">01 / Research problem</p><h2>Beyond the consensus picture.</h2></div>
+          <div class="section-heading"><p class="section-tag">01 / Research problem</p><h2>Beyond the gradient setting</h2></div>
           <div class="research-layout">
             <div class="intro-block">
-              <p>Under certain symmetry assumptions, projected self-attention has a gradient structure. This provides a powerful account of consensus, clustering, and metastability—but excludes nonconstant periodic orbits.</p>
-              <p>Here the query, key, and value matrices are constant yet not required to satisfy those symmetry assumptions. The resulting dynamics can be markedly richer, even for three particles constrained to an ellipse.</p>
-              <a class="inline-link" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Read the mathematical development <span aria-hidden="true">↗</span></a>
+              <p>Under appropriate symmetry assumptions on the query, key, and value matrices, projected self-attention has a gradient formulation. In the analytic setting considered here, the gradient structure implies convergence to equilibria and precludes nonconstant periodic orbits.</p>
+              <p>We relax these symmetry assumptions while keeping the attention matrices constant. For three particles constrained to an ellipse, the angular equations define a vector field on the three-dimensional torus, allowing for the investigation of non-gradient recurrent dynamics.</p>
+              <a class="inline-link" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">See the mathematical analysis <span aria-hidden="true">↗</span></a>
             </div>
             <div class="equation-card">
               <p class="micro-heading">PROJECTED ATTENTION MODEL</p>
@@ -86,52 +86,52 @@
         <div class="container">
           <div class="section-heading heading-on-dark">
             <p class="section-tag">02 / Selected findings</p>
-            <h2>Small systems. Unexpected complexity.</h2>
-            <p>Analytic results and carefully qualified numerical observations, from a three-dimensional torus to a network of twenty interacting groups.</p>
+            <h2>Analytical results and numerical observations</h2>
+            <p>The paper combines explicit calculations for synchronized solutions with numerical studies of periodic, torus-like, and chaotic behavior. It also examines coupled systems of up to sixty particles.</p>
           </div>
           <div class="findings">
             <article class="finding-card">
               <div class="finding-number">A <span>· Analytical</span></div>
               <h3>An explicit periodic orbit</h3>
-              <p>The fully synchronized three-particle configuration gives a periodic orbit whenever the effective matrix has nonreal eigenvalues. Its nontrivial Floquet multipliers can be computed in closed form.</p>
+              <p>When the effective matrix has nonreal eigenvalues, the fully synchronized configuration defines a periodic orbit. Its period and two nontrivial Floquet multipliers are obtained explicitly (Proposition 4).</p>
               <div class="finding-bottom"><span>Proposition 4 · Figure 1</span><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/figure_01.m" aria-label="View MATLAB code for Figure 1">View code ↗</a></div>
             </article>
             <article class="finding-card">
               <div class="finding-number">B <span>· Numerical</span></div>
               <h3>Periodic, torus-like, and chaotic regimes</h3>
-              <p>For other constant matrices, parameter scans reveal attracting nonsynchronized periodic orbits, candidate torus dynamics, changes of Floquet stability, and positive finite-time Lyapunov exponents.</p>
+              <p>Parameter scans, Poincaré sections, continuation of periodic orbits, and finite-time Lyapunov exponents provide evidence for attracting nonsynchronized periodic orbits, torus-like dynamics, and chaotic regimes.</p>
               <div class="finding-bottom"><span>Section 3 · Figures 2–8</span><a href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab" aria-label="Browse MATLAB drivers for Figures 2 through 8">View experiments ↗</a></div>
             </article>
             <article class="finding-card">
               <div class="finding-number">C <span>· Numerical &amp; structural</span></div>
-              <h3>Architecture reshapes collective dynamics</h3>
-              <p>Block-masked attention and equivalent fixed group labels share one coupled vector field. Separately normalized heads give a different one, with strongly contrasting Lyapunov behavior at the same coupling parameter.</p>
+              <h3>Dependence on coupling architecture</h3>
+              <p>Block-masked single-head attention and the group-label formulation define the same coupled vector field. Separately normalized two-head attention gives a different system, with distinct numerical Lyapunov spectra at the same nominal coupling parameter.</p>
               <div class="finding-bottom"><span>Sections 4–5 · Figure 9</span><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/figure_09.m" aria-label="View MATLAB driver for Figure 9">View code ↗</a></div>
             </article>
           </div>
 
           <div class="data-panel">
             <div class="data-panel-head">
-              <div><p class="micro-heading">HIGHER-DIMENSIONAL EXPERIMENTS</p><h3>Expansion beyond the uncoupled product</h3></div>
-              <p>Numbers below are finite-time numerical estimates, not verified asymptotic invariants.</p>
+              <div><p class="micro-heading">HIGHER-DIMENSIONAL EXPERIMENTS</p><h3>Lyapunov spectra of coupled systems</h3></div>
+              <p>The values reported below are finite-time estimates and are not rigorous bounds on asymptotic Lyapunov exponents.</p>
             </div>
             <div class="comparison-grid">
               <div class="comparison-card">
                 <span class="comparison-index">06 / particles</span>
-                <strong>Architecture matters</strong>
-                <p>At ε = 0.1, separate heads yield two positive leading exponents, approximately <span class="numbers">(0.1176, 0.0256)</span>; the block-masked spectrum is consistent with regular attracting dynamics.</p>
+                <strong>Six-particle comparison</strong>
+                <p>At ε = 0.1, the two leading exponents for separately normalized heads are approximately <span class="numbers">(0.1176, 0.0256)</span>. The block-masked system instead yields approximately <span class="numbers">(0.00031, −0.02614)</span>, consistent with an attracting periodic orbit.</p>
                 <a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/figure_09.m">Figure 9 driver ↗</a>
               </div>
               <div class="comparison-card">
                 <span class="comparison-index">09 / particles</span>
-                <strong>3 positive directions</strong>
-                <p>A heterogeneous coupled system with one chaotic and two periodic building blocks has three estimated Lyapunov exponents above 0.01 in each separately normalized two-head run.</p>
+                <strong>Nine-particle comparison</strong>
+                <p>For one numerically chaotic three-particle subsystem coupled to two systems with attracting periodic orbits, the two-head model has three estimated Lyapunov exponents exceeding 0.01 in each of two runs.</p>
                 <a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/table_01.m">Table 1 driver ↗</a>
               </div>
               <div class="comparison-card feature-card">
                 <span class="comparison-index">60 / particles</span>
-                <strong>26 above the threshold</strong>
-                <p>For twenty coupled three-particle groups, both tested initial configurations yield 26 of the 40 computed exponents greater than 0.01, compared with 20 for the uncoupled numerical baseline.</p>
+                <strong>Sixty-particle computation</strong>
+                <p>For twenty coupled three-particle groups, each of two runs produces 26 of the largest 40 estimated exponents above 0.01. The corresponding uncoupled product has 20 above this threshold in the numerical baseline.</p>
                 <a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/table_02.m">Table 2 driver ↗</a>
               </div>
             </div>
@@ -143,11 +143,11 @@
         <div class="container reproduction-grid">
           <div>
             <p class="section-tag">03 / Reproducibility</p>
-            <h2>Follow every experiment.</h2>
-            <p>The public MATLAB package contains one driver script for each of the nine figures and two numerical tables, together with the supporting functions and archived data.</p>
-            <p>By default, drivers use archived numerical results. Set <code>recompute = true</code> inside a driver to repeat its calculation. Long parameter scans and the 60-particle Lyapunov computation can be expensive.</p>
+            <h2>Numerical code and data</h2>
+            <p>The repository contains MATLAB driver scripts for Figures 1–9 and Tables 1–2, along with supporting functions and archived numerical datasets.</p>
+            <p>Each driver loads the corresponding archived data by default. The option <code>recompute = true</code> reruns the associated numerical calculation. The parameter scans and higher-dimensional Lyapunov computations can require substantial computing time.</p>
             <div class="button-row reproduction-buttons">
-              <a class="button button-dark" href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab">Browse the code ↗</a>
+              <a class="button button-dark" href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab">MATLAB repository ↗</a>
               <a class="button button-outline-dark" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/README.md">Reproduction guide ↗</a>
             </div>
           </div>
@@ -171,9 +171,9 @@ recompute = <span class="code-accent">false</span>;  <span class="code-comment">
         <div class="container citation-grid">
           <div>
             <p class="section-tag">04 / Manuscript &amp; citation</p>
-            <h2>The full story is in the paper.</h2>
-            <p>The manuscript contains the precise mathematical statements, parameter choices, numerical methodology, and an explicit discussion of the limitations of the computed evidence.</p>
-            <a class="button button-primary" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Open the 30-page manuscript ↗</a>
+            <h2>Manuscript and citation</h2>
+            <p>The manuscript gives the mathematical formulation, statements and proofs of the analytical results, numerical parameters and methods, and a discussion of the scope and limitations of the computations.</p>
+            <a class="button button-primary" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Manuscript (PDF) ↗</a>
           </div>
           <div class="citation-box">
             <p class="micro-heading">SUGGESTED REFERENCE</p>
