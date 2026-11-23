@@ -215,8 +215,8 @@ h1 {font:400 clamp(45px,4.8vw,72px)/1.1 var(--serif); letter-spacing:-.04em; col
   display: block;
   width: 100%;
   height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+  aspect-ratio: 800 / 409;
+  object-fit: contain;
   background: #081a29;
 }
 .art-note {
