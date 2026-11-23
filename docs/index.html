@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101d2b">
+  <meta name="description" content="Research on non-gradient self-attention particle systems, periodic and torus-like dynamics, numerical chaos, and reproducible MATLAB experiments with up to 60 particles.">
+  <meta property="og:title" content="From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems">
+  <meta property="og:description" content="A mathematical and computational exploration of self-attention dynamics, with a manuscript and reproducible MATLAB experiments.">
+  <meta property="og:type" content="website">
+  <link rel="canonical" href="https://j-mireles-james.github.io/self-attention-dynamics/">
+  <link rel="stylesheet" href="assets/site.css">
+  <title>Self-Attention Dynamics — J. D. Mireles James</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="identity" href="#top" aria-label="Self-Attention Dynamics — top of page">
+          <span class="identity-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+          <span><strong>Attention Dynamics</strong><small>A research project</small></span>
+        </a>
+        <nav aria-label="Primary navigation" class="navigation">
+          <a href="#research">Research</a>
+          <a href="#results">Results</a>
+          <a href="#reproducibility">Reproducibility</a>
+          <a class="nav-link-strong" href="https://github.com/J-mireles-james/self-attention-dynamics" target="_blank" rel="noopener noreferrer">GitHub <span aria-hidden="true">↗</span></a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <div class="eyebrow"><span class="eyebrow-rule"></span> MATHEMATICAL DYNAMICS · RESEARCH PREPRINT</div>
+            <h1 id="hero-title">From Low-Dimensional <span class="accent-text">Chaos</span> to High-Dimensional Dynamics in Self-Attention Systems</h1>
+            <p class="author-line">J. D. Mireles James <span aria-hidden="true">·</span> Florida Atlantic University <span aria-hidden="true">·</span> November 2026</p>
+            <p class="hero-lede">What changes when the particle models behind self-attention are allowed to move beyond the gradient setting? We investigate periodic orbits, torus-like recurrence, and numerical evidence of chaos—and how these behaviors interact when small systems are coupled into larger networks.</p>
+            <div class="button-row">
+              <a class="button button-primary" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Read the manuscript <span aria-hidden="true">↗</span></a>
+              <a class="button button-secondary" href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab">Explore MATLAB code <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="hero-caption">A theoretical and numerical investigation of idealized continuous-time attention systems. The observed chaotic dynamics are numerical findings, not computer-assisted existence proofs.</p>
+          </div>
+
+          <div class="hero-visual" aria-label="Schematic illustration of three particles on an ellipse and coupled three-particle groups">
+            <div class="visual-topline"><span>GEOMETRIC VIEWPOINT</span><span>01 / 02</span></div>
+            <svg class="visual-svg" viewBox="0 0 620 560" role="img" aria-labelledby="schematicTitle schematicDesc" xmlns="http://www.w3.org/2000/svg">
+              <title id="schematicTitle">Schematic of attention dynamics</title>
+              <desc id="schematicDesc">Three points orbit on an ellipse at left; connected three-particle groups at right. This is a conceptual illustration, not a computed trajectory.</desc>
+              <defs>
+                <linearGradient id="ellipseGlow" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#83e3d6" stop-opacity=".95"/><stop offset="1" stop-color="#7caad9" stop-opacity=".28"/></linearGradient>
+                <radialGradient id="nodeFill"><stop stop-color="#bbfff1"/><stop offset="1" stop-color="#5dd8c6"/></radialGradient>
+                <linearGradient id="dividerLine" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#82ead7" stop-opacity=".08"/><stop offset=".5" stop-color="#82ead7" stop-opacity=".55"/><stop offset="1" stop-color="#82ead7" stop-opacity=".08"/></linearGradient>
+              </defs>
+              <g stroke="#b0d4df" opacity=".15" stroke-width="1">
+                <path d="M35 80H585M35 160H585M35 240H585M35 320H585M35 400H585M35 480H585"/>
+                <path d="M70 50V520M150 50V520M230 50V520M310 50V520M390 50V520M470 50V520M550 50V520"/>
+              </g>
+              <g transform="translate(0 2)">
+                <ellipse cx="215" cy="222" rx="143" ry="98" transform="rotate(-31 215 222)" stroke="url(#ellipseGlow)" stroke-width="2.3" fill="none"/>
+                <ellipse cx="215" cy="222" rx="125" ry="81" transform="rotate(-31 215 222)" stroke="#7dc6c6" stroke-opacity=".12" stroke-dasharray="3 8" fill="none"/>
+                <path d="M215 222L304 151M215 222L150 298M215 222L303 271" stroke="#e4f6ef" stroke-opacity=".22" stroke-dasharray="4 6" stroke-width="1.1"/>
+                <path d="M304 151Q219 122 150 298" stroke="#7cd6e5" stroke-opacity=".22" stroke-width="1.1" fill="none"/>
+                <circle cx="304" cy="151" r="9" fill="url(#nodeFill)" stroke="#c7fff5" stroke-width="1"/>
+                <circle cx="150" cy="298" r="9" fill="#8daaf7" stroke="#cee0ff" stroke-width="1"/>
+                <circle cx="303" cy="271" r="9" fill="#f1ca93" stroke="#ffe6bd" stroke-width="1"/>
+                <circle cx="215" cy="222" r="3" fill="#b5d4df" opacity=".55"/>
+                <text x="194" y="377" text-anchor="middle" class="viz-small">THREE PARTICLES</text>
+                <text x="194" y="399" text-anchor="middle" class="viz-detail">Dynamics on a torus</text>
+              </g>
+              <g transform="translate(333 72)">
+                <path d="M67 87L126 138L66 186Z" stroke="#84dfd1" stroke-opacity=".75" fill="#84dfd1" fill-opacity=".055" stroke-width="1.3"/>
+                <path d="M188 203L241 257L160 274Z" stroke="#84dfd1" stroke-opacity=".75" fill="#84dfd1" fill-opacity=".055" stroke-width="1.3"/>
+                <path d="M50 313L110 365L29 379Z" stroke="#84dfd1" stroke-opacity=".75" fill="#84dfd1" fill-opacity=".055" stroke-width="1.3"/>
+                <g fill="none" stroke="#88aee2" stroke-width="1.2" stroke-dasharray="5 7" stroke-opacity=".7">
+                  <path d="M126 138L188 203M66 186L110 365M160 274L110 365M241 257L110 365"/>
+                </g>
+                <g fill="#a5e8d9" stroke="#d4fcf4" stroke-width=".6">
+                  <circle cx="67" cy="87" r="6"/><circle cx="126" cy="138" r="6"/><circle cx="66" cy="186" r="6"/>
+                  <circle cx="188" cy="203" r="6"/><circle cx="241" cy="257" r="6"/><circle cx="160" cy="274" r="6"/>
+                  <circle cx="50" cy="313" r="6"/><circle cx="110" cy="365" r="6"/><circle cx="29" cy="379" r="6"/>
+                </g>
+                <text x="135" y="435" text-anchor="middle" class="viz-small">COUPLED GROUPS</text>
+                <text x="135" y="457" text-anchor="middle" class="viz-detail">Masked &amp; multi-head attention</text>
+              </g>
+              <path d="M30 495H590" stroke="url(#dividerLine)" stroke-width="1"/>
+              <text x="34" y="529" class="viz-note">SCHEMATIC · NOT NUMERICAL DATA</text>
+            </svg>
+          </div>
+        </div>
+        <div class="container">
+          <div class="metrics" aria-label="Project at a glance">
+            <div class="metric"><strong>03</strong><span>particles in the<br>building-block model</span></div>
+            <div class="metric"><strong>09</strong><span>manuscript figures<br>with MATLAB drivers</span></div>
+            <div class="metric"><strong>60</strong><span>particles in the<br>largest experiment</span></div>
+            <div class="metric"><strong>26</strong><span>computed exponents<br>exceeding 0.01</span></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light-section" id="research">
+        <div class="container">
+          <div class="section-heading"><p class="section-tag">01 / Research problem</p><h2>Beyond the consensus picture.</h2></div>
+          <div class="research-layout">
+            <div class="intro-block">
+              <p>Under certain symmetry assumptions, projected self-attention has a gradient structure. This provides a powerful account of consensus, clustering, and metastability—but excludes nonconstant periodic orbits.</p>
+              <p>Here the query, key, and value matrices are constant yet not required to satisfy those symmetry assumptions. The resulting dynamics can be markedly richer, even for three particles constrained to an ellipse.</p>
+              <a class="inline-link" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Read the mathematical development <span aria-hidden="true">↗</span></a>
+            </div>
+            <div class="equation-card">
+              <p class="micro-heading">PROJECTED ATTENTION MODEL</p>
+              <p class="equation" aria-label="x dot i equals tangent projection of the sum over j of alpha i j V x j">ẋᵢ = Πᵂₓᵢ ( ∑ⱼ αᵢⱼ Vxⱼ )</p>
+              <div class="eq-rule"></div>
+              <p>The three-particle angular equations define a real-analytic vector field on <span class="math">𝕋³</span>. The paper derives its synchronized solutions and their Floquet multipliers explicitly.</p>
+              <span class="small-reference">Section 2 · Theorem 3 · Proposition 4</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section paper-section" id="results">
+        <div class="container">
+          <div class="section-heading heading-on-dark">
+            <p class="section-tag">02 / Selected findings</p>
+            <h2>Small systems. Unexpected complexity.</h2>
+            <p>Analytic results and carefully qualified numerical observations, from a three-dimensional torus to a network of twenty interacting groups.</p>
+          </div>
+          <div class="findings">
+            <article class="finding-card">
+              <div class="finding-number">A <span>· Analytical</span></div>
+              <h3>An explicit periodic orbit</h3>
+              <p>The fully synchronized three-particle configuration gives a periodic orbit whenever the effective matrix has nonreal eigenvalues. Its nontrivial Floquet multipliers can be computed in closed form.</p>
+              <div class="finding-bottom"><span>Proposition 4 · Figure 1</span><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/figure_01.m" aria-label="View MATLAB code for Figure 1">View code ↗</a></div>
+            </article>
+            <article class="finding-card">
+              <div class="finding-number">B <span>· Numerical</span></div>
+              <h3>Periodic, torus-like, and chaotic regimes</h3>
+              <p>For other constant matrices, parameter scans reveal attracting nonsynchronized periodic orbits, candidate torus dynamics, changes of Floquet stability, and positive finite-time Lyapunov exponents.</p>
+              <div class="finding-bottom"><span>Section 3 · Figures 2–8</span><a href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab" aria-label="Browse MATLAB drivers for Figures 2 through 8">View experiments ↗</a></div>
+            </article>
+            <article class="finding-card">
+              <div class="finding-number">C <span>· Numerical &amp; structural</span></div>
+              <h3>Architecture reshapes collective dynamics</h3>
+              <p>Block-masked attention and equivalent fixed group labels share one coupled vector field. Separately normalized heads give a different one, with strongly contrasting Lyapunov behavior at the same coupling parameter.</p>
+              <div class="finding-bottom"><span>Sections 4–5 · Figure 9</span><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/figure_09.m" aria-label="View MATLAB driver for Figure 9">View code ↗</a></div>
+            </article>
+          </div>
+
+          <div class="data-panel">
+            <div class="data-panel-head">
+              <div><p class="micro-heading">HIGHER-DIMENSIONAL EXPERIMENTS</p><h3>Expansion beyond the uncoupled product</h3></div>
+              <p>Numbers below are finite-time numerical estimates, not verified asymptotic invariants.</p>
+            </div>
+            <div class="comparison-grid">
+              <div class="comparison-card">
+                <span class="comparison-index">06 / particles</span>
+                <strong>Architecture matters</strong>
+                <p>At ε = 0.1, separate heads yield two positive leading exponents, approximately <span class="numbers">(0.1176, 0.0256)</span>; the block-masked spectrum is consistent with regular attracting dynamics.</p>
+                <a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/figure_09.m">Figure 9 driver ↗</a>
+              </div>
+              <div class="comparison-card">
+                <span class="comparison-index">09 / particles</span>
+                <strong>3 positive directions</strong>
+                <p>A heterogeneous coupled system with one chaotic and two periodic building blocks has three estimated Lyapunov exponents above 0.01 in each separately normalized two-head run.</p>
+                <a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/table_01.m">Table 1 driver ↗</a>
+              </div>
+              <div class="comparison-card feature-card">
+                <span class="comparison-index">60 / particles</span>
+                <strong>26 above the threshold</strong>
+                <p>For twenty coupled three-particle groups, both tested initial configurations yield 26 of the 40 computed exponents greater than 0.01, compared with 20 for the uncoupled numerical baseline.</p>
+                <a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/table_02.m">Table 2 driver ↗</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section light-section reproduction-section" id="reproducibility">
+        <div class="container reproduction-grid">
+          <div>
+            <p class="section-tag">03 / Reproducibility</p>
+            <h2>Follow every experiment.</h2>
+            <p>The public MATLAB package contains one driver script for each of the nine figures and two numerical tables, together with the supporting functions and archived data.</p>
+            <p>By default, drivers use archived numerical results. Set <code>recompute = true</code> inside a driver to repeat its calculation. Long parameter scans and the 60-particle Lyapunov computation can be expensive.</p>
+            <div class="button-row reproduction-buttons">
+              <a class="button button-dark" href="https://github.com/J-mireles-james/self-attention-dynamics/tree/main/matlab">Browse the code ↗</a>
+              <a class="button button-outline-dark" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/matlab/README.md">Reproduction guide ↗</a>
+            </div>
+          </div>
+          <div class="code-card" aria-label="Example MATLAB reproduction workflow">
+            <div class="code-header"><span class="code-dots" aria-hidden="true">● ● ●</span><span>MATLAB / examples</span></div>
+            <pre><code><span class="code-comment">% Open the matlab/ directory first</span>
+
+<span class="code-accent">figure_07</span>   <span class="code-comment">% torus-like portrait, β = 0.59</span>
+<span class="code-accent">figure_09</span>   <span class="code-comment">% six-particle Lyapunov histories</span>
+<span class="code-accent">table_02</span>    <span class="code-comment">% sixty-particle exponent table</span>
+
+<span class="code-comment">% In any driver script:</span>
+recompute = <span class="code-accent">false</span>;  <span class="code-comment">% read archived data</span>
+<span class="code-comment">% Set true to rerun the computation</span></code></pre>
+            <p class="code-foot">MATLAB R2023b recommended · archived data included · MIT-licensed code</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section citation-section" id="paper">
+        <div class="container citation-grid">
+          <div>
+            <p class="section-tag">04 / Manuscript &amp; citation</p>
+            <h2>The full story is in the paper.</h2>
+            <p>The manuscript contains the precise mathematical statements, parameter choices, numerical methodology, and an explicit discussion of the limitations of the computed evidence.</p>
+            <a class="button button-primary" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Open the 30-page manuscript ↗</a>
+          </div>
+          <div class="citation-box">
+            <p class="micro-heading">SUGGESTED REFERENCE</p>
+            <p>J. D. Mireles James. <em>From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems.</em> Research manuscript, November 2026.</p>
+            <div class="citation-bottom"><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/CITATION.cff">Citation metadata ↗</a><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/LICENSE">Code license ↗</a></div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div><strong>Self-Attention Dynamics</strong><p>Research by J. D. Mireles James<br>Florida Atlantic University</p></div>
+        <div class="footer-links"><a href="#top">Back to top ↑</a><a href="https://github.com/J-mireles-james/self-attention-dynamics">Repository ↗</a><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Manuscript ↗</a></div>
+      </div>
+      <div class="container footer-bottom"><span>November 2026 · Research project website</span><span>Code: MIT license · Manuscript: separate scholarly work · AI assistance disclosed in paper</span></div>
+    </footer>
+  </div>
+</body>
+</html>
