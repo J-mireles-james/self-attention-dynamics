@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+*.asv
+*~
+*.autosave
+# Keep matlab/data/*.mat: these datasets are intentional archived numerical results.
