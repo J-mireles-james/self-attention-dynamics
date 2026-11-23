@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "Please cite the accompanying research manuscript when using this MATLAB package."
+title: "From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems"
+authors:
+  - family-names: "Mireles James"
+    given-names: "J. D."
+repository-code: "https://github.com/J-mireles-james/self-attention-dynamics"
+date-released: 2026-11-22
+type: software
