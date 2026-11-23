@@ -4,6 +4,10 @@
 
 This public research repository accompanies the manuscript *From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems* and provides the MATLAB scripts and archived numerical data used for its figures and tables.
 
+## Research website
+
+The project webpage is in [`docs/`](docs/). Once GitHub Pages is enabled with **Deploy from a branch → `main` → `/docs`**, it will be available at **[Self-Attention Dynamics](https://j-mireles-james.github.io/self-attention-dynamics/)**.
+
 ## Manuscript
 
 [Read the manuscript (PDF)](paper/chaosTransformers.pdf)
