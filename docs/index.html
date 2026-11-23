@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#101d2b">
+  <meta name="theme-color" content="#111111">
   <meta name="description" content="Research on non-gradient self-attention particle systems, periodic and torus-like dynamics, numerical chaos, and reproducible MATLAB experiments with up to 60 particles.">
   <meta property="og:title" content="From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems">
   <meta property="og:description" content="Analytical and numerical study of projected self-attention particle systems, including coupled systems and MATLAB reproduction materials.">
   <meta property="og:type" content="website">
   <meta property="og:image" content="https://j-mireles-james.github.io/self-attention-dynamics/assets/interacting-orbits.jpg">
   <link rel="canonical" href="https://j-mireles-james.github.io/self-attention-dynamics/">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="assets/site.css?v=white-academic-1">
   <title>Self-Attention Dynamics — J. D. Mireles James</title>
 </head>
 <body>
@@ -64,7 +64,7 @@
 
       <section class="section light-section" id="research">
         <div class="container">
-          <div class="section-heading"><p class="section-tag">01 / Research problem</p><h2>Beyond the gradient setting</h2></div>
+          <div class="section-heading section-banner"><p class="section-tag">01 / Research problem</p><h2>Beyond the gradient setting</h2></div>
           <div class="research-layout">
             <div class="intro-block">
               <p>Under appropriate symmetry assumptions on the query, key, and value matrices, projected self-attention has a gradient formulation. In the analytic setting considered here, the gradient structure implies convergence to equilibria and precludes nonconstant periodic orbits.</p>
@@ -84,11 +84,11 @@
 
       <section class="section paper-section" id="results">
         <div class="container">
-          <div class="section-heading heading-on-dark">
+          <div class="section-heading section-banner">
             <p class="section-tag">02 / Selected findings</p>
             <h2>Analytical results and numerical observations</h2>
-            <p>The paper combines explicit calculations for synchronized solutions with numerical studies of periodic, torus-like, and chaotic behavior. It also examines coupled systems of up to sixty particles.</p>
           </div>
+          <p class="section-intro">The paper combines explicit calculations for synchronized solutions with numerical studies of periodic, torus-like, and chaotic behavior. It also examines coupled systems of up to sixty particles.</p>
           <div class="findings">
             <article class="finding-card">
               <div class="finding-number">A <span>· Analytical</span></div>
@@ -140,10 +140,13 @@
       </section>
 
       <section class="section light-section reproduction-section" id="reproducibility">
-        <div class="container reproduction-grid">
-          <div>
+        <div class="container">
+          <div class="section-banner">
             <p class="section-tag">03 / Reproducibility</p>
             <h2>Numerical code and data</h2>
+          </div>
+          <div class="reproduction-grid">
+            <div>
             <p>The repository contains MATLAB driver scripts for Figures 1–9 and Tables 1–2, along with supporting functions and archived numerical datasets.</p>
             <p>Each driver loads the corresponding archived data by default. The option <code>recompute = true</code> reruns the associated numerical calculation. The parameter scans and higher-dimensional Lyapunov computations can require substantial computing time.</p>
             <div class="button-row reproduction-buttons">
@@ -164,14 +167,18 @@ recompute = <span class="code-accent">false</span>;  <span class="code-comment">
 <span class="code-comment">% Set true to rerun the computation</span></code></pre>
             <p class="code-foot">MATLAB R2023b recommended · archived data included · MIT-licensed code</p>
           </div>
+          </div>
         </div>
       </section>
 
       <section class="section citation-section" id="paper">
-        <div class="container citation-grid">
-          <div>
+        <div class="container">
+          <div class="section-banner">
             <p class="section-tag">04 / Manuscript &amp; citation</p>
             <h2>Manuscript and citation</h2>
+          </div>
+          <div class="citation-grid">
+            <div>
             <p>The manuscript gives the mathematical formulation, statements and proofs of the analytical results, numerical parameters and methods, and a discussion of the scope and limitations of the computations.</p>
             <a class="button button-primary" href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/paper/chaosTransformers.pdf">Manuscript (PDF) ↗</a>
           </div>
@@ -179,6 +186,7 @@ recompute = <span class="code-accent">false</span>;  <span class="code-comment">
             <p class="micro-heading">SUGGESTED REFERENCE</p>
             <p>J. D. Mireles James. <em>From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems.</em> Research manuscript, November 2026.</p>
             <div class="citation-bottom"><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/CITATION.cff">Citation metadata ↗</a><a href="https://github.com/J-mireles-james/self-attention-dynamics/blob/main/LICENSE">Code license ↗</a></div>
+          </div>
           </div>
         </div>
       </section>
