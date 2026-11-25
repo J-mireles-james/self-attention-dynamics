@@ -10,7 +10,9 @@ The project webpage is in [`docs/`](docs/). Once GitHub Pages is enabled with **
 
 ## Manuscript
 
-[Read the manuscript (PDF)](paper/chaosTransformers.pdf)
+**J. D. Mireles James.** *From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems.* arXiv:2611.29951 [math.DS], 2026.
+
+[arXiv preprint](https://arxiv.org/abs/2611.29951) · [arXiv PDF](https://arxiv.org/pdf/2611.29951) · [Repository manuscript (PDF)](paper/chaosTransformers.pdf)
 
 ## Overview
 
@@ -44,4 +46,4 @@ The Figure 7 torus-like experiment uses **β = 0.59**. Figure 9 reports the corr
 
 MATLAB code is distributed under the [MIT License](LICENSE). The manuscript is provided for scholarly reading and citation; it is **not** licensed under MIT. AI assistance in the development of the manuscript and numerical code is disclosed in the manuscript and the MATLAB README.
 
-Please cite the accompanying manuscript when using these computations. A DOI can be added after archival release.
+Please cite the [arXiv preprint](https://arxiv.org/abs/2611.29951) when using these computations. See [CITATION.cff](CITATION.cff) for citation metadata. A software DOI can be added after archival release.
