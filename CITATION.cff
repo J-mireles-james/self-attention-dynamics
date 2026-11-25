@@ -7,3 +7,15 @@ authors:
 repository-code: "https://github.com/J-mireles-james/self-attention-dynamics"
 date-released: 2026-11-22
 type: software
+preferred-citation:
+  type: article
+  title: "From Low-Dimensional Chaos to High-Dimensional Dynamics in Self-Attention Systems"
+  authors:
+    - family-names: "Mireles James"
+      given-names: "J. D."
+  journal: "arXiv preprint"
+  year: 2026
+  url: "https://arxiv.org/abs/2611.29951"
+  identifiers:
+    - type: other
+      value: "arXiv:2611.29951"
